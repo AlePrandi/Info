@@ -1,4 +1,4 @@
-public class test {
+public class TestEred {
     public static void main(String[] args) {
         Persona p1 = new Persona("mario", "rossi", "MRARSS920301");
         Studente stud = new Studente("andrea", "bianchi", "MARASD","A", "bocconi");

@@ -1,4 +1,4 @@
-public class Test {
+public class TestFraz {
     public static void main(String[] args) {
         Frazione frazione = new Frazione();
         Frazione frazione1 = new Frazione('*', 10);
