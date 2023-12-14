@@ -21,3 +21,9 @@ p2= new Persona("Verdi Lia");
 p1=doc1; //up-casting sottinteso (Persona)doc1
 doc2=(Docente)p2; <-- down-casting non lecito ClassCastException
 doc2=(Docente)p1; <-- down-casting lecito perché p1 in realtà si riferisce ad un Docente
+
+Una classe astratta non può essere istanziata
+es. Animale non ha senso di esistere ma esiste cane,gatto...
+
+La classe astratta serve come base per metter tutti gli attributi in comune
+Una classe concreta non può ne avere ne usare un metodo astratto
