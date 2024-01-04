@@ -4,7 +4,7 @@ public class Cubo extends Solido{
 
     public Cubo(double lato, double peso_spec) {
         super(peso_spec);
-        this.lato = lato;
+        this.lato = (lato > 0) ? lato : 1;
     }
 
     public double getLato() {

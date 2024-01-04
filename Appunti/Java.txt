@@ -27,3 +27,6 @@ es. Animale non ha senso di esistere ma esiste cane,gatto...
 
 La classe astratta serve come base per metter tutti gli attributi in comune
 Una classe concreta non può ne avere ne usare un metodo astratto
+
+Si usa la classe Vector per dei vettori ad oggetti
+la CAPACITY indica la dimensione massima mentre la SIZE incrementa ogni volta che faccio un add
