@@ -20,4 +20,21 @@ public class VectorInteri {
         return vInteri.size();
     }
 
+    public int cercaMin() throws ErroreVettoreVuoto{
+        if(!vInteri.isEmpty()) {
+            int min = vInteri.get(0);
+    
+            for(int i = 1; i < vInteri.size(); i++) {
+                if(vInteri.get(i) < min) {
+                    min = vInteri.get(i);
+                }
+            }
+    
+            return min;
+            
+        }else{
+            throw new ErroreVettoreVuoto();
+        }
+    }
+
 }
