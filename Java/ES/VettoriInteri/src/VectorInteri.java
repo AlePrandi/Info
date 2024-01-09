@@ -1,40 +1,83 @@
 import java.util.Vector;
 
 public class VectorInteri {
-    private Vector <Integer> vInteri;
-    private final int DIM;
+    private Vector<Integer> vInteri;
 
-    public VectorInteri(int dimensione){
-        DIM = (dimensione > 0) ? dimensione : 1;
+    public VectorInteri() {
         vInteri = new Vector<Integer>();
-        for( int k = 0; k < DIM; k++){
-            vInteri.set(k, 0);
+    }
+
+    public VectorInteri(String elementi) {
+        String[] elementiCorretti = elementi.split("\\|");
+        int dimensione = elementiCorretti.length;
+        vInteri = new Vector<Integer>();
+        for (int k = 0; k < dimensione; k++) {
+            try {
+                vInteri.add(Integer.parseInt(elementiCorretti[k]));
+            } catch (NumberFormatException e) {
+                throw new NumberFormatException("Elemento non valido: " + elementiCorretti[k]);
+            }
         }
     }
 
-    public void add(int n){
-        vInteri.add(n);
+    public VectorInteri(int dim) {
+        if (dim > 0) {
+            vInteri = new Vector<Integer>();
+            for (int k = 0; k < dim; k++) {
+                vInteri.add(0);
+            }
+        } else {
+            vInteri = new Vector<Integer>();
+            vInteri.add(0);
+        }
     }
 
-    public int getDimensione(){
+    public int getDim() {
         return vInteri.size();
     }
 
-    public int cercaMin() throws ErroreVettoreVuoto{
-        if(!vInteri.isEmpty()) {
-            int min = vInteri.get(0);
-    
-            for(int i = 1; i < vInteri.size(); i++) {
-                if(vInteri.get(i) < min) {
-                    min = vInteri.get(i);
-                }
-            }
-    
-            return min;
-            
-        }else{
-            throw new ErroreVettoreVuoto();
-        }
+    public void add(int elemento) {
+        vInteri.add(elemento);
     }
 
+    public int getMin() {
+        int min = vInteri.get(0);
+        if (vInteri.size() > 0) {
+            for (int k = 1; k < vInteri.size(); k++) {
+                if (vInteri.get(k) < min)
+                    min = vInteri.get(k);
+            }
+        } else {
+            throw new ErroreVettoreVuoto();
+        }
+        return min;
+    }
+
+    public int cercaEl(int elemento) throws ErroreElementoInesistente {
+        int tro = -1;
+        int k = 0;
+        while (k < vInteri.size() && tro == -1) {
+            if (vInteri.get(k) == elemento)
+                tro = k;
+            else
+                k++;
+        }
+        if (tro != -1)
+            return tro;
+        else
+            throw new ErroreElementoInesistente();
+    }
+
+    public void eliminaPrimo(int elemento) throws ErroreElementoInesistente {
+        int pos = cercaEl(elemento);
+        vInteri.remove(pos);
+    }
+
+    public String toString() {
+        String str = "";
+        for (int k : vInteri) {
+            str += k + " ";
+        }
+        return str;
+    }
 }

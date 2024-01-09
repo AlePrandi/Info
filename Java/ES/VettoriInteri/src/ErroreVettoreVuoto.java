@@ -1,10 +1,9 @@
-public class ErroreVettoreVuoto extends RuntimeException{
-    
-    public ErroreVettoreVuoto(){
-        super("Vettore Vuoto");
+public class ErroreVettoreVuoto extends RuntimeException {
+    public ErroreVettoreVuoto() {
+        super("Errore Vettore Vuoto ");
     }
 
-    public ErroreVettoreVuoto(String s){
-        super(s);
+    public ErroreVettoreVuoto(String stringa) {
+        super(stringa);
     }
 }

@@ -1,12 +1,11 @@
 import java.io.IOException;
 
-public class ErroreVettorePieno extends IOException{
-    
-    public ErroreVettorePieno(){
-        super("Vettore Pieno");
+public class ErroreVettorePieno extends IOException {
+    public ErroreVettorePieno() {
+        super("Vettore Pieno ");
     }
 
-    public ErroreVettorePieno(String s){
-        super(s);
+    public ErroreVettorePieno(String stringa) {
+        super(stringa);
     }
 }
