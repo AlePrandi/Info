@@ -9,9 +9,8 @@ public class VectorInteri {
 
     public VectorInteri(String elementi) {
         String[] elementiCorretti = elementi.split("\\|");
-        int dimensione = elementiCorretti.length;
         vInteri = new Vector<Integer>();
-        for (int k = 0; k < dimensione; k++) {
+        for (int k = 0; k < elementiCorretti.length; k++) {
             try {
                 vInteri.add(Integer.parseInt(elementiCorretti[k]));
             } catch (NumberFormatException e) {
@@ -26,9 +25,6 @@ public class VectorInteri {
             for (int k = 0; k < dim; k++) {
                 vInteri.add(0);
             }
-        } else {
-            vInteri = new Vector<Integer>();
-            vInteri.add(0);
         }
     }
 
@@ -41,16 +37,16 @@ public class VectorInteri {
     }
 
     public int getMin() {
-        int min = vInteri.get(0);
         if (vInteri.size() > 0) {
+            int min = vInteri.get(0);
             for (int k = 1; k < vInteri.size(); k++) {
                 if (vInteri.get(k) < min)
                     min = vInteri.get(k);
             }
+            return min;
         } else {
             throw new ErroreVettoreVuoto();
         }
-        return min;
     }
 
     public int cercaEl(int elemento) throws ErroreElementoInesistente {
@@ -70,13 +66,18 @@ public class VectorInteri {
 
     public void eliminaPrimo(int elemento) throws ErroreElementoInesistente {
         int pos = cercaEl(elemento);
-        vInteri.remove(pos);
+        vInteri.removeElementAt(pos);
+    }
+
+    public void elimina(int elemento) throws ErroreElementoInesistente {
+        if (!vInteri.removeElement(elemento)) // se restituisce false non ha trovato l'el
+            throw new ErroreElementoInesistente();
     }
 
     public String toString() {
         String str = "";
         for (int k : vInteri) {
-            str += k + " ";
+            str += k + "|";
         }
         return str;
     }

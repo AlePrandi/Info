@@ -43,16 +43,16 @@ public class VettoreInteri {
     }
 
     public int getMin() {
-        int min = vInteri[0];
         if (nInteri > 0) {
+            int min = vInteri[0];
             for (int k = 1; k < nInteri; k++) {
                 if (vInteri[k] < min)
                     min = vInteri[k];
             }
+            return min;
         } else {
             throw new ErroreVettoreVuoto();
         }
-        return min;
     }
 
     public int cercaEl(int elemento) throws ErroreElementoInesistente {
@@ -82,7 +82,7 @@ public class VettoreInteri {
     public String toString() {
         String str = "";
         for (int k : vInteri) {
-            str += k + " ";
+            str += k + "|";
         }
         return str;
     }

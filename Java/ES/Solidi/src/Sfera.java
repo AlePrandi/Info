@@ -1,14 +1,18 @@
 import java.lang.Math;
-public class Sfera extends Solido{
+public class Sfera extends Solido1{
     private double raggio;
 
-    public Sfera(double raggio, double peso_spec) {
-        super(peso_spec);
+    public Sfera(double raggio, double pesoSpecifico) {
+        super(pesoSpecifico);
         this.raggio = (raggio > 0) ? raggio : 1;
     }
 
     public double getRaggio() {
         return raggio;
+    }
+
+    public double getPeso(){
+        return super.getPeso();
     }
 
     public double getSuperficie() {

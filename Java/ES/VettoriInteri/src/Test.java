@@ -1,5 +1,9 @@
 public class Test {
     public static void main(String[] args) {
+
+        /*
+         *
+         
         VettoreInteri v = new VettoreInteri(2);
 
         try {
@@ -50,8 +54,24 @@ public class Test {
         } catch (ErroreElementoInesistente e) {
             System.out.println(e.getMessage());
         }
-
+        */
         VectorInteri v3 = new VectorInteri("1|2|3");
         System.out.println(v3.toString());
+
+        try {
+            v3.elimina(1);
+            System.out.println(v3);
+            v3.elimina(5);
+            System.out.println(v3);
+        }catch(ErroreElementoInesistente e) { 
+            System.out.println(e.getMessage());
+        }
+
+        String s = "123a";
+        if (s.matches("[0-9]*")){
+            System.out.println("Ok");
+        }else{
+            System.out.println("Non ok");
+        }
     }
 }

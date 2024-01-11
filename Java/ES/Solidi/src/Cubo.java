@@ -1,9 +1,9 @@
 import java.lang.Math;
-public class Cubo extends Solido{
+public class Cubo extends Solido1{
     private double lato;
 
-    public Cubo(double lato, double peso_spec) {
-        super(peso_spec);
+    public Cubo(double lato, double pesoSpecifico) {
+        super(pesoSpecifico);
         this.lato = (lato > 0) ? lato : 1;
     }
 
@@ -17,6 +17,10 @@ public class Cubo extends Solido{
 
     public double getVolume(){
         return Math.pow(lato, 3);
+    }
+
+    public double getPeso(){
+        return super.getPeso();
     }
 
     public String toString(){
