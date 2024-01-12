@@ -1,3 +1,3 @@
 public interface Comparabile {
-    boolean Comp(Aereomobile a);
+    boolean Comp(Aereo a);
 }

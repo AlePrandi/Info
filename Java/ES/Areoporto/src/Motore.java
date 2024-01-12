@@ -1,25 +1,25 @@
-public class Motore extends Aereomobile implements Comparabile{
-    private int cv;
-    private final static int MIN_CV=1;
-    public Motore(String sigla,int cv) {
+public class Motore extends Aereo implements Comparabile{
+    private int Cavalli;
+    private final static int MIN_Cavalli=1;
+    public Motore(String sigla,int Cavalli) {
         super(sigla);
-        if(cv<=0){
-            this.cv=MIN_CV;
+        if(Cavalli<=0){
+            this.Cavalli=MIN_Cavalli;
         }else{
-            this.cv=cv;
+            this.Cavalli=Cavalli;
         }
     }
 
-    public int getCv() {
-        return cv;
+    public int getCavalli() {
+        return Cavalli;
     }
 
     @Override
-    public boolean Comp(Aereomobile a) {
+    public boolean Comp(Aereo a) {
         if(a==null || getClass() != a.getClass()){
             return false;
         }else{
-            if(getCv()>((Motore) a).getCv()){
+            if(getCavalli()>((Motore) a).getCavalli()){
                 return true;
             }else{
                 return false;
@@ -29,6 +29,6 @@ public class Motore extends Aereomobile implements Comparabile{
 
     public String toString(){
         String s=super.toString();
-        return s + " Cavalli: " + cv;
+        return s + " Cavalli: " + Cavalli;
     }
 }

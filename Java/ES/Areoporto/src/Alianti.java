@@ -1,29 +1,25 @@
-public class Alianti extends Aereomobile implements Comparabile{
-    private int aereodinamica;
-    private final static int MIN_AEREODINAMICA=1;
-    public Alianti(String sigla, int aereodinamica) {
+public class Alianti extends Aereo implements Comparabile{
+    private int areodinamica;
+    private final static int MIN_AREODINAMICA=1;
+    public Alianti(String sigla, int areodinamica) {
         super(sigla);
-        if(aereodinamica<=0){
-            this.aereodinamica=MIN_AEREODINAMICA;
-        }else{
-            this.aereodinamica=aereodinamica;
-        }
+        this.areodinamica = (areodinamica > 0) ? areodinamica : MIN_AREODINAMICA;
     }
 
-    public int getAereodinamica() {
-        return aereodinamica;
+    public int getAreodinamica() {
+        return areodinamica;
     }
     public String toString(){
         String s=super.toString();
-        return s + " Aereodinamica: " + aereodinamica;
+        return s + " Areodinamica: " + areodinamica;
     }
 
     @Override
-    public boolean Comp(Aereomobile a) {
+    public boolean Comp(Aereo a) {
         if(a==null || getClass() != a.getClass()){
             return false;
         }else{
-            if(getAereodinamica()>((Alianti) a).getAereodinamica()){
+            if(getAreodinamica()>((Alianti) a).getAreodinamica()){
                 return true;
             }else{
                 return false;

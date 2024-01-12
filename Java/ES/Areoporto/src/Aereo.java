@@ -1,6 +1,6 @@
-public abstract class Aereomobile {
+public abstract class Aereo {
     private String sigla;
-    public Aereomobile(String sigla){
+    public Aereo(String sigla){
         this.sigla=sigla;
     }
 
@@ -8,7 +8,7 @@ public abstract class Aereomobile {
         return sigla;
     }
 
-    public boolean eLoStesso(Aereomobile a){
+    public boolean uguale(Aereo a){
         if(this.sigla.equals(a.getSigla())){
             return true;
         }else{
