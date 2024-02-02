@@ -35,9 +35,13 @@ public class Porto {
         for (Molo m : moli){
             if (b.getLarg() <= m.getLarg_max() && b.getLung() <= m.getLung_max()){
                 for(int k = 0; k < m.getBarche().size(); k++){
-                    if (m.getBarche().get(k).isOccupato() != null)
+                    if (m.getBarche().get(k).isOccupato() != true){
+                        str += m.getBarche().get(k).toString();
+                    }
+                }
             }
         }
+        return str;
     }
 
     @Override

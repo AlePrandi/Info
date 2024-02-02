@@ -16,7 +16,7 @@ public class Molo {
         this.barche = new Vector<PostoBarca>();
     }
 
-    private class PostoBarca {
+    public class PostoBarca {
         private int indice;
         private int numGiorni;
         private Barca barca;
@@ -75,7 +75,6 @@ public class Molo {
     public double getLarg_max() {
         return larg_max;
     }
-
     
     public Vector<PostoBarca> getBarche() {
         return barche;
