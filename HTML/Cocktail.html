@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <form>
+            <label id="labelIngrediente" class="labelclass">Ingrediente:
+                <input type="text" size="20" id="fuser">
+            </label><br>
+
+            <input type="submit" id="fsubmit" value="invia">
+
+        </form>
+        <div id="dinamico">
+        </div>
+
+    </body>
+</body>
+
+</html>
+<script>
+    /*********
+     utilizzo il webserver di VSC 
+     **********/
+    let ingrediente = document.getElementById("labelIngrediente");
+    let url = "www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingrediente; //url che punta al json... può essere anche un url sul web
+
+
+    fetch(url)
+        .then(response => response.json()) //richiamo la funzione json
+        .then(dati => {
+            const datiJson = dati
+            console.log(datiJson) 
+            /*
+            datiJson.forEach(riga => { 
+            })
+            */
+        })
+</script>
