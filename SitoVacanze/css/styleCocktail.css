@@ -1,0 +1,202 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #151515;
+}
+
+body {
+  background-color: #151515;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.Title {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Arial";
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px #ff9966;
+}
+
+.Title-text {
+  position: absolute;
+  box-sizing: border-box;
+  color: #ff9966;
+  width: 0%;
+  inset: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px rgba(79, 19, 148, 0.8);
+}
+
+.Title:hover .Title-text {
+  width: 110%;
+  filter: drop-shadow(0 0 20px rgba(79, 19, 148, 0.8));
+}
+
+.home {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+
+.home {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "Arial";
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  color: #ff9966;
+  width: 0%;
+  inset: 0;
+  border-right: 6px solid #ff9966;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px #ff9966;
+}
+
+.home:hover .hover-text {
+  width: 110%;
+  filter: drop-shadow(0 0 20px #ff9966)
+}
+
+.navbar {
+  list-style: none;
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar li {
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navbar li a {
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+  font: bold 110% Arial, sans-serif;
+  color: #ff9966;
+  text-decoration: none;
+}
+
+.Random {
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 9px 25px;
+  background-color: rgba(79, 19, 148, 0.8);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.Random:hover {
+  font: bold 110% Arial, sans-serif;
+  color: black;
+  text-decoration: none;
+  background-color: #ff9966;
+}
+
+#CocktailDin {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.cocktail-container {
+  margin-top: 7%;
+  display: flex;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cocktail-img {
+  flex: 1;
+}
+
+.cocktail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.cocktail-details {
+  flex: 2;
+  padding: 20px;
+}
+
+.cocktail-details .badge {
+  background-color: #ff9966;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cocktail-details .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cocktail-details .description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cocktail-details .description p {
+  text-align: justify;
+  color: #151515;
+  font-size: 20px;
+}
+
+.cocktail-details .description strong {
+  color: #151515;
+}
+
+.line {
+  position: absolute;
+  width: 79%;
+  margin-top: 20%;
+  height: 4px;
+  background-color: rgba(79, 19, 148, 0.8);
+}

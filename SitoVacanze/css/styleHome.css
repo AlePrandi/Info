@@ -1,0 +1,250 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #151515;
+}
+
+body {
+  background: #151515;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.Title {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: "Arial";
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px #ff9966;
+}
+
+.Title-text {
+  position: absolute;
+  box-sizing: border-box;
+  color: #ff9966;
+  width: 0%;
+  inset: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px rgba(79, 19, 148, 0.8);
+}
+
+.Title:hover .Title-text {
+  width: 110%;
+  filter: drop-shadow(0 0 20px rgba(79, 19, 148, 0.8));
+}
+
+.home {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+
+.home {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "Arial";
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  color: #ff9966;
+  width: 0%;
+  inset: 0;
+  border-right: 6px solid #ff9966;
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px #ff9966;
+}
+
+.home:hover .hover-text {
+  width: 110%;
+  filter: drop-shadow(0 0 20px #ff9966)
+}
+
+.navbar {
+  list-style: none;
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar li {
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navbar li a {
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+  font: bold 110% Arial, sans-serif;
+  color: #ff9966;
+  text-decoration: none;
+}
+
+.Random {
+  font: bold 110% Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 9px 25px;
+  background-color: rgba(79, 19, 148, 0.8);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.Random:hover {
+  font: bold 110% Arial, sans-serif;
+  color: black;
+  text-decoration: none;
+  background-color: #ff9966;
+}
+
+.line {
+  position: absolute;
+  width: 79%;
+  margin-top: 20%;
+  height: 4px;
+  background-color: rgba(79, 19, 148, 0.8);
+}
+
+.section1 {
+  margin-top: 8%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 20px;
+}
+
+.section1 img {
+  width: 25%;
+  height: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+
+.section1 p {
+  color: #151515;
+  width: 65%;
+  margin-right: 5%;
+  text-align: justify;
+  background-color: white;
+  font-size: 150%;
+  line-height: 1.5;
+}
+
+.section1 b {
+  color: #151515;
+  width: 65%;
+  background-color: white;
+  font-size: 140%;
+  line-height: 1.5;
+}
+
+.section2 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 20px;
+}
+
+.section2 img {
+  width: 22%;
+  height: 350px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 12%;
+  order: 1;
+  border-radius: 10px;
+}
+
+.section2 p {
+  color: #151515;
+  background-color: white;
+  margin-left: 4%;
+  text-align: justify;
+  width: 50%;
+  font-size: 150%;
+  line-height: 1.5;
+}
+
+.section2 b {
+  color: #151515;
+  width: 65%;
+  background-color: white;
+  font-size: 140%;
+  line-height: 1.5;
+}
+
+.section3 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+  border-radius: 20px;
+}
+
+.section3 img {
+  width: 30%;
+  height: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 10px;
+}
+
+.section3 p {
+  color: #151515;
+  width: 65%;
+  margin-right: 5%;
+  text-align: justify;
+  background-color: white;
+  font-size: 150%;
+  line-height: 1.5;
+}
+
+.section3 b {
+  color: #151515;
+  width: 65%;
+  background-color: white;
+  font-size: 140%;
+  line-height: 1.5;
+}
