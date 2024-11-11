@@ -9,7 +9,7 @@ subNome.addEventListener("click", function (e) {
     fetch(url)
         .then(response => response.json())
         .then(dati => {
-            dinamico.innerHTML = ''; // Clear previous results
+            dinamico.innerHTML = ''; 
             const datiJson = dati;
             console.log(datiJson);
             if (datiJson.drinks) {
