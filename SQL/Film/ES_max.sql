@@ -6,6 +6,3 @@ SELECT max(incasso) as max_incasso
 FROM film AS f, proiezioni AS p
 ORDER BY max_incasso DESC LIMIT 1
 )
-GROUP BY f.codFilm 
-
-
